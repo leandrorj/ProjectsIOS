@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="12141" systemVersion="16B2657" minimumToolsVersion="Xcode 7.0" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
+    <entity name="Fotos" representedClassName="Fotos" syncable="YES">
+        <attribute name="data" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="extension" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="imagem" optional="YES" attributeType="Binary" syncable="YES"/>
+        <relationship name="produto" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Produtos" inverseName="fotos" inverseEntity="Produtos" syncable="YES"/>
+    </entity>
+    <entity name="Produtos" representedClassName="Produtos" syncable="YES">
+        <attribute name="marca" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="nome" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="quantidade" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="NO" syncable="YES"/>
+        <relationship name="fotos" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Fotos" inverseName="produto" inverseEntity="Fotos" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Produtos" positionX="-45" positionY="0" width="128" height="105"/>
+        <element name="Fotos" positionX="-18" positionY="27" width="128" height="105"/>
+    </elements>
+</model>
